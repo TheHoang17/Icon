@@ -2,17 +2,16 @@
 const props = defineProps({
   width: String,
   height: String,
-  color: String
-})
+  color: String,
+});
 </script>
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    :width="width"
-    :height="height"
-    viewBox="0 0 17.22 15.999"
+    :width="width ? width : 12.62"
+    :height="height ? height : 12"
   >
-    <g :fill="color">
+    <g :class="[fill, stroke]">
       <path
         id="Path_593"
         data-name="Path 593"
